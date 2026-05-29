@@ -599,6 +599,8 @@ h3 {
 .unknown-call-visual {
   display: grid;
   gap: 12px;
+  max-width: 640px;
+  width: 100%;
 }
 
 .incoming-phone,
@@ -1362,6 +1364,16 @@ h3 {
   }
 }
 
+@media (max-width: 1180px) {
+  .unknown-call-section {
+    grid-template-columns: 1fr;
+  }
+
+  .unknown-call-visual {
+    max-width: 680px;
+  }
+}
+
 @media (max-width: 720px) {
   .site-header {
     padding: 14px 16px;
@@ -1493,6 +1505,11 @@ h3 {
 
   .unknown-call-links {
     display: grid;
+  }
+
+  .unknown-call-links a {
+    width: 100%;
+    justify-content: center;
   }
 
   .incoming-phone strong {
