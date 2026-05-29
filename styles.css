@@ -29,6 +29,12 @@ body {
   overflow-x: hidden;
 }
 
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -145,7 +151,7 @@ select {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   align-items: center;
   gap: clamp(36px, 5vw, 88px);
   min-height: calc(92vh - 73px);
@@ -185,6 +191,15 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+p,
+li,
+a,
+summary,
+strong,
+span {
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -232,6 +247,7 @@ h3 {
   border: 1px solid var(--ink);
   border-radius: 6px;
   font-weight: 900;
+  text-align: center;
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
@@ -538,7 +554,7 @@ h3 {
 
 .unknown-call-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: clamp(32px, 6vw, 78px);
   align-items: center;
   background: var(--signal-dark);
@@ -577,6 +593,7 @@ h3 {
   border: 1px solid var(--ink);
   border-radius: 4px;
   font-weight: 900;
+  text-align: center;
 }
 
 .unknown-call-visual {
@@ -684,7 +701,7 @@ h3 {
 
 .weekly-report-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(440px, 1.14fr);
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
   gap: clamp(32px, 5vw, 74px);
   align-items: center;
 }
@@ -928,7 +945,7 @@ h3 {
 
 .signup-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.68fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.68fr);
   gap: clamp(32px, 6vw, 84px);
   align-items: start;
   padding-top: 50px;
@@ -1326,6 +1343,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .signup-section,
+  .weekly-report-section,
+  .unknown-call-section {
+    gap: 34px;
+  }
+
   .flow {
     grid-template-columns: 1fr;
   }
@@ -1353,7 +1376,28 @@ h3 {
   }
 
   h1 {
-    font-size: 48px;
+    font-size: clamp(40px, 13vw, 52px);
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  .lead,
+  .unknown-call-copy p:not(.kicker),
+  .rules-copy p,
+  .report-copy p:not(.kicker),
+  .signup-copy p,
+  .seo-hero p,
+  .legal-hero p,
+  .thanks-card p:not(.kicker) {
+    font-size: 17px;
   }
 
   .hero-actions,
@@ -1376,6 +1420,14 @@ h3 {
     box-shadow: 8px 8px 0 rgba(23, 35, 31, 0.16);
   }
 
+  .active-call {
+    padding: 18px;
+  }
+
+  .active-call h2 {
+    font-size: 29px;
+  }
+
   .console-top,
   .decision-stack,
   .daily-brief,
@@ -1393,8 +1445,87 @@ h3 {
     gap: 7px;
   }
 
+  .use-case-grid article,
+  .flow article,
+  .proof-card {
+    min-height: auto;
+  }
+
+  .use-case-grid span,
+  .flow-index,
+  .proof-card span {
+    margin-bottom: 28px;
+  }
+
+  .flow-index {
+    font-size: 34px;
+  }
+
+  .incoming-phone,
+  .call-verdict,
+  .weekly-report,
+  .proof-card,
+  .rule-card,
+  .waitlist-form,
+  .price-line,
+  .use-case-grid article,
+  .seo-article section,
+  .legal-content article,
+  .thanks-card {
+    box-shadow: 5px 5px 0 var(--line);
+  }
+
+  .weekly-report {
+    padding: 16px;
+  }
+
+  .report-top {
+    gap: 10px;
+  }
+
+  .report-badge {
+    width: fit-content;
+  }
+
+  .report-summary {
+    padding: 14px;
+  }
+
+  .unknown-call-links {
+    display: grid;
+  }
+
+  .incoming-phone strong {
+    font-size: clamp(30px, 10vw, 42px);
+    overflow-wrap: anywhere;
+  }
+
+  .faq-list summary {
+    min-height: 56px;
+    padding: 17px 46px 17px 16px;
+    font-size: 18px;
+  }
+
+  .faq-list p {
+    padding: 0 16px 18px;
+  }
+
+  .waitlist-form {
+    padding: 18px;
+  }
+
+  .checkbox {
+    grid-template-columns: 18px 1fr;
+  }
+
+  .privacy-note {
+    font-size: 12px;
+  }
+
   .ticker-track {
     animation-duration: 18s;
+    gap: 28px;
+    font-size: 12px;
   }
 
   .section,
@@ -1425,6 +1556,23 @@ h3 {
     padding: 48px 16px 72px;
   }
 
+  .thanks-page {
+    min-height: auto;
+    padding: 48px 16px 72px;
+  }
+
+  .seo-hero,
+  .legal-hero {
+    margin-bottom: 24px;
+  }
+
+  .seo-hero h1,
+  .legal-hero h1,
+  .thanks-card h1 {
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 0.98;
+  }
+
   .legal-content article,
   .seo-article section,
   .cookie-panel {
@@ -1444,5 +1592,63 @@ h3 {
 
   .proof-card span {
     margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-word {
+    font-size: 17px;
+  }
+
+  .brand-mark,
+  .brand-mark svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .site-header {
+    gap: 12px;
+  }
+
+  .hero {
+    padding-top: 32px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 12vw, 46px);
+  }
+
+  .button {
+    min-height: 46px;
+    padding: 0 14px;
+  }
+
+  .agent-console,
+  .weekly-report,
+  .waitlist-form,
+  .proof-card,
+  .seo-article section,
+  .legal-content article,
+  .thanks-card {
+    padding: 14px;
+  }
+
+  .active-call h2 {
+    font-size: 25px;
+  }
+
+  .decision-stack button,
+  .report-actions button {
+    min-height: 46px;
+  }
+
+  .cookie-banner {
+    right: 8px;
+    bottom: 8px;
+    width: calc(100vw - 16px);
+  }
+
+  .cookie-panel {
+    padding: 12px;
   }
 }
