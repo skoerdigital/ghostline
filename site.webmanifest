@@ -1,0 +1,19 @@
+{
+  "name": "ghostline",
+  "short_name": "ghostline",
+  "description": "Dedykowany numer telefonu i domena email obsługiwana przez agenta AI.",
+  "lang": "pl-PL",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#edf3ef",
+  "theme_color": "#0e4f4d",
+  "icons": [
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
