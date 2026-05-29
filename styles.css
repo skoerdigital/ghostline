@@ -1087,6 +1087,35 @@ h3 {
   padding: 72px clamp(18px, 4vw, 40px) 96px;
 }
 
+.thanks-page {
+  min-height: calc(100vh - 78px);
+  display: grid;
+  place-items: center;
+  padding: 72px clamp(18px, 4vw, 40px);
+}
+
+.thanks-card {
+  max-width: 780px;
+  padding: clamp(28px, 5vw, 56px);
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--acid);
+}
+
+.thanks-card h1 {
+  font-size: clamp(44px, 7vw, 80px);
+}
+
+.thanks-card p:not(.kicker) {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.thanks-card .button {
+  margin-top: 12px;
+}
+
 .seo-article {
   display: grid;
   gap: 18px;

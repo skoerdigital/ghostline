@@ -475,12 +475,14 @@
         <form
           class="waitlist-form"
           id="waitlist-form"
-          action="https://formsubmit.co/ajax/kontakt@ghostline.pl"
+          action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="Nowy lead z ghostline.pl">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="access_key" value="ac874736-3840-47c6-8f65-ef1fa5db36fb">
+          <input type="hidden" name="subject" value="Nowy lead z ghostline.pl">
+          <input type="hidden" name="from_name" value="ghostline.pl">
+          <input type="hidden" name="redirect" value="https://ghostline.pl/thanks.html">
+          <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
           <label class="honeypot" aria-hidden="true">
             Nie wypełniaj tego pola
             <input name="_honey" type="text" tabindex="-1" autocomplete="off">
