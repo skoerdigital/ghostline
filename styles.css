@@ -452,6 +452,7 @@ h3 {
 
 .section,
 .use-cases-section,
+.unknown-call-section,
 .rules-panel,
 .weekly-report-section,
 .proof-section,
@@ -533,6 +534,95 @@ h3 {
 
 .use-case-grid p {
   margin-bottom: 0;
+}
+
+.unknown-call-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(32px, 6vw, 78px);
+  align-items: center;
+  background: var(--signal-dark);
+  color: var(--paper);
+  max-width: none;
+  padding-left: max(clamp(18px, 4vw, 56px), calc((100vw - 1220px) / 2 + 40px));
+  padding-right: max(clamp(18px, 4vw, 56px), calc((100vw - 1220px) / 2 + 40px));
+}
+
+.unknown-call-section .kicker {
+  color: var(--acid);
+}
+
+.unknown-call-copy p:not(.kicker) {
+  max-width: 620px;
+  margin-top: 24px;
+  color: rgba(237, 243, 239, 0.76);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.unknown-call-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.unknown-call-links a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  color: var(--ink);
+  background: var(--acid);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.unknown-call-visual {
+  display: grid;
+  gap: 12px;
+}
+
+.incoming-phone,
+.call-verdict {
+  padding: 22px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.incoming-phone span,
+.call-verdict span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.incoming-phone strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1;
+}
+
+.incoming-phone p,
+.call-verdict p {
+  margin-bottom: 0;
+  color: #3b4943;
+  line-height: 1.45;
+}
+
+.call-verdict.safe {
+  background: var(--acid);
+}
+
+.call-verdict.spam {
+  background: #f2dfd6;
 }
 
 .rules-panel {
@@ -943,6 +1033,246 @@ h3 {
   font-weight: 900;
 }
 
+.privacy-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.privacy-note a {
+  color: var(--signal-dark);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px clamp(18px, 4vw, 56px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-link {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.legal-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 72px clamp(18px, 4vw, 40px) 96px;
+}
+
+.seo-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 72px clamp(18px, 4vw, 40px) 96px;
+}
+
+.seo-article {
+  display: grid;
+  gap: 18px;
+}
+
+.seo-hero {
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.seo-hero h1 {
+  font-size: clamp(44px, 6.5vw, 84px);
+}
+
+.seo-hero p {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.seo-article section {
+  padding: 28px;
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--line);
+}
+
+.seo-article h2 {
+  margin-bottom: 16px;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1;
+}
+
+.seo-article p,
+.seo-article li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.seo-article p:last-child,
+.seo-article ul:last-child {
+  margin-bottom: 0;
+}
+
+.seo-article ul {
+  padding-left: 22px;
+}
+
+.seo-callout {
+  background: var(--signal-dark) !important;
+  color: var(--paper);
+  box-shadow: 7px 7px 0 var(--acid) !important;
+}
+
+.seo-callout p {
+  color: rgba(237, 243, 239, 0.78);
+}
+
+.seo-callout .button {
+  margin-top: 10px;
+}
+
+.legal-hero {
+  max-width: 860px;
+  margin-bottom: 58px;
+}
+
+.legal-hero h1 {
+  font-size: clamp(46px, 7vw, 86px);
+}
+
+.legal-hero p {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.legal-updated {
+  font-size: 14px !important;
+  font-weight: 900;
+}
+
+.legal-content {
+  display: grid;
+  gap: 14px;
+}
+
+.legal-content article {
+  padding: 26px;
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--line);
+}
+
+.legal-content h2 {
+  margin-bottom: 16px;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.05;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.legal-content p:last-child,
+.legal-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-content a {
+  color: var(--signal-dark);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-content ul {
+  padding-left: 22px;
+}
+
+.cookie-banner {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 100;
+  width: min(560px, calc(100vw - 36px));
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-panel {
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(23, 35, 31, 0.18);
+}
+
+.cookie-copy {
+  max-width: none;
+}
+
+.cookie-copy h2 {
+  margin-bottom: 6px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.cookie-copy p:not(.kicker),
+.cookie-small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.cookie-copy p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cookie-actions .button {
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+.cookie-small {
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+.cookie-small a {
+  color: var(--signal-dark);
+  font-weight: 900;
+}
+
 @media (max-width: 1020px) {
   .hero {
     grid-template-columns: 1fr;
@@ -959,6 +1289,7 @@ h3 {
 
   .section-head,
   .use-case-grid,
+  .unknown-call-section,
   .rules-panel,
   .weekly-report-section,
   .proof-section,
@@ -1039,6 +1370,7 @@ h3 {
 
   .section,
   .use-cases-section,
+  .unknown-call-section,
   .rules-panel,
   .weekly-report-section,
   .proof-section,
@@ -1049,6 +1381,36 @@ h3 {
 
   .signup-section {
     padding-top: 32px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  .legal-page {
+    padding: 48px 16px 72px;
+  }
+
+  .seo-page {
+    padding: 48px 16px 72px;
+  }
+
+  .legal-content article,
+  .seo-article section,
+  .cookie-panel {
+    padding: 18px;
+  }
+
+  .cookie-banner {
+    right: 10px;
+    bottom: 10px;
+    width: calc(100vw - 20px);
+  }
+
+  .cookie-actions .button {
+    width: auto;
+    flex: 1 1 auto;
   }
 
   .proof-card span {

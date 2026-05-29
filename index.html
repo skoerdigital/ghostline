@@ -132,10 +132,12 @@
       </a>
       <nav class="nav" aria-label="Nawigacja">
         <a href="#zastosowania">Zastosowania</a>
+        <a href="#kto-dzwoni">Kto dzwoni?</a>
         <a href="#mechanizm">Mechanizm</a>
         <a href="#zasady">Zasady</a>
         <a href="#raport">Raporty</a>
         <a href="#faq">FAQ</a>
+        <a href="privacy.html">Prywatność</a>
         <a href="#waiting-list">Lista oczekujących</a>
       </nav>
     </header>
@@ -256,6 +258,39 @@
             <h3>Osobisty bufor dla rekrutacji i ogłoszeń</h3>
             <p>Rekruterzy, kupujący, sprzedający i pośrednicy dostają działający kontakt, ale nie wchodzą bezpośrednio w Twój prywatny dzień.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="unknown-call-section" id="kto-dzwoni">
+        <div class="unknown-call-copy">
+          <p class="kicker">Kto dzwoni?</p>
+          <h2>Nie musisz sprawdzać każdego nieznanego numeru.</h2>
+          <p>
+            Frazy typu “kto dzwonił”, “czy odebrać nieznany numer” albo “czy to spam”
+            pojawiają się zwykle za późno: gdy telefon już przerwał Ci dzień. ghostline
+            działa wcześniej. Dajesz firmom osobny numer, a agent odbiera, rozpoznaje
+            intencję i przepuszcza tylko tematy warte Twojej uwagi.
+          </p>
+          <div class="unknown-call-links">
+            <a href="kto-dzwoni.html">Jak podchodzić do nieznanych numerów</a>
+            <a href="spam-telefoniczny.html">Jak ograniczyć spam telefoniczny</a>
+          </div>
+        </div>
+
+        <div class="unknown-call-visual" aria-label="Przykład filtrowania nieznanych połączeń">
+          <div class="incoming-phone">
+            <span>Nieznany numer</span>
+            <strong>+48 601 *** 284</strong>
+            <p>Agent odbiera zamiast Ciebie</p>
+          </div>
+          <div class="call-verdict safe">
+            <span>Warte decyzji</span>
+            <p>Rekruter podał firmę, widełki i proponowany termin rozmowy.</p>
+          </div>
+          <div class="call-verdict spam">
+            <span>Wyciszone</span>
+            <p>Automat sprawdzał, czy numer jest aktywny. Brak akcji.</p>
+          </div>
         </div>
       </section>
 
@@ -473,13 +508,44 @@
             <input name="limitation" type="checkbox" required>
             <span>Rozumiem, że pilot nie służy do banków, KYC, krytycznego 2FA ani sytuacji awaryjnych.</span>
           </label>
-          <button class="button button-primary submit" type="submit">Dołącz do pilota</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite">
-            Zgłoszenie zostanie zapisane lokalnie w tym prototypie.
+          <label class="checkbox">
+            <input name="marketing_consent" type="checkbox" required>
+            <span>Chcę dołączyć do listy oczekujących i otrzymywać wiadomości dotyczące startu pilota, zaproszenia do testów oraz dostępności ghostline na podany adres email.</span>
+          </label>
+          <p class="privacy-note">
+            Administratorem danych jest operator serwisu ghostline. Dane przetwarzamy w celu obsługi zgłoszenia,
+            prowadzenia listy oczekujących i kontaktu w sprawie pilota. Szczegóły znajdziesz w
+            <a href="privacy.html">Polityce prywatności</a>.
           </p>
+          <button class="button button-primary submit" type="submit">Dołącz do pilota</button>
         </form>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>ghostline</span>
+      <nav aria-label="Linki prawne">
+        <a href="privacy.html">Polityka prywatności</a>
+        <button type="button" class="footer-link cookie-settings">Ustawienia cookies</button>
+      </nav>
+    </footer>
+
+    <div class="cookie-banner" id="cookie-banner" hidden>
+      <div class="cookie-panel" role="region" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+        <div class="cookie-copy">
+          <h2 id="cookie-title">Cookies</h2>
+          <p id="cookie-desc">
+            Używamy tylko niezbędnego zapisu w przeglądarce, żeby obsłużyć formularz i zapamiętać tę informację.
+          </p>
+        </div>
+        <div class="cookie-actions">
+          <button type="button" class="button button-primary" id="cookie-accept">Rozumiem</button>
+        </div>
+        <p class="cookie-small">
+          Więcej informacji: <a href="privacy.html#cookies">Polityka cookies</a>.
+        </p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
